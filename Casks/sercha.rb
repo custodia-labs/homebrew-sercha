@@ -3,7 +3,7 @@ cask "sercha" do
   name "sercha"
   desc "Sercha CLI"
   homepage "https://github.com/custodia-labs/sercha-cli"
-  version "0.1.1a"
+  version "0.1.1b"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "sercha" do
   on_macos do
     on_intel do
       url "https://github.com/custodia-labs/sercha-cli/releases/download/v#{version}/sercha_#{version}_darwin_amd64.tar.gz"
-      sha256 "9310dd26200d34097705e25f1cf0f1cb980f41af755a49079f9ff4bfaef36c30"
+      sha256 "a7e76b83703656f736cc1273bdb21a821d2829f7445fdb563b02cbf2d3fded83"
     end
     on_arm do
       url "https://github.com/custodia-labs/sercha-cli/releases/download/v#{version}/sercha_#{version}_darwin_arm64.tar.gz"
-      sha256 "52cffedf9a5f077f82861c2ad4ea03b70beb2fa2ebc86502e0c00f1f1525d920"
+      sha256 "f65c1fca54ddae1ab2a8a00da4716b9ec311af150757b00f036abf372e3b13c3"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/custodia-labs/sercha-cli/releases/download/v#{version}/sercha_#{version}_linux_amd64.tar.gz"
-      sha256 "1ae7c82c553128cc1c42f3687a1e0a8d53b8a4d0f65d6729afee0d88cf8ff2ef"
+      sha256 "b49977f4bd01e264040ed5e082e10b0c02e4440423d4e2cf73659b9a9b3ecb08"
     end
     on_arm do
       url "https://github.com/custodia-labs/sercha-cli/releases/download/v#{version}/sercha_#{version}_linux_arm64.tar.gz"
-      sha256 "2612cd99a752281e9617de0d7ff6df661b90c2d5debfd5c759a83d5fe901d2ee"
+      sha256 "2c599a2c3676118150ba1148837ee31b9d424f40688cdeac48a75fe4c075f82f"
     end
   end
 
