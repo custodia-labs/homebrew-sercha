@@ -5,7 +5,7 @@
 class Sercha < Formula
   desc "Local-first semantic search engine"
   homepage "https://github.com/custodia-labs/sercha-cli"
-  version "0.2.1"
+  version "0.2.3"
   license "Apache-2.0"
 
   depends_on "poppler" => :required
@@ -13,8 +13,8 @@ class Sercha < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/custodia-labs/sercha-cli/releases/download/v0.2.1/sercha_0.2.1_darwin_arm64.tar.gz"
-      sha256 "a7d5e0092763b433daa2a12962767d37590f31656656fcfa31b8257e4b6cba0a"
+      url "https://github.com/custodia-labs/sercha-cli/releases/download/v0.2.3/sercha_0.2.3_darwin_arm64.tar.gz"
+      sha256 "f3c9c2f1ceafccd39a88b2ab3e6ce9ed1a4219dcf90953ea257735bcbd164788"
 
       def install
         bin.install "sercha"
@@ -24,8 +24,15 @@ class Sercha < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/custodia-labs/sercha-cli/releases/download/v0.2.1/sercha_0.2.1_linux_amd64.tar.gz"
-      sha256 "e835d8ec28c812a5b69759263a5fdbcd274a3c4ac508e40a14ceb39f17f3fd13"
+      url "https://github.com/custodia-labs/sercha-cli/releases/download/v0.2.3/sercha_0.2.3_linux_amd64.tar.gz"
+      sha256 "5352044b57dbbb4516c2505954d0a62a8cc28ebbdc077c1f1d85a53acdb3d995"
+      def install
+        bin.install "sercha"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/custodia-labs/sercha-cli/releases/download/v0.2.3/sercha_0.2.3_linux_arm64.tar.gz"
+      sha256 "1f5a54750a1d5f083a90be3326a22cea09e9a4977f754169c9cbca301d36f685"
       def install
         bin.install "sercha"
       end
